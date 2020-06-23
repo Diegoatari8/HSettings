@@ -27,3 +27,9 @@
   -App Data: AppData/LocalLow/CompanyName/ProductName directory. This folder is the same if the game is a build or in the editor.
   
   
+# Platform Compatibility
+Currently it has only been tested on Windows 10.
+
+If you test it on another platform and you experience any problem,please let me know leaving an Issue with information about what platform you are
+having the problems so i can fix them. Thanks! 
+  
