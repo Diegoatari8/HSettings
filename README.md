@@ -6,6 +6,7 @@
   
   To change settings use a toggle/dropdown/slider (unity only,textmeshpro support coming soon) and use the OnChangeValue function to reference the Settings script from
   a GameObject and change a specific setting.
+ 
  AA = AntiAliasing
  
  RR = Realtime Reflection Probes
