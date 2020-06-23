@@ -2,7 +2,7 @@
  Simple config file system for Unity. (save & load quality settings)
  
 # How to use
-  Add the script "Settings" to your main menu (first scene).
+  Add the script "Settings" to your main menu.
   
   To change settings use a toggle/dropdown/slider (unity only,textmeshpro support coming soon) and use the OnChangeValue function to reference the Settings script from
   a GameObject and change a specific setting.
