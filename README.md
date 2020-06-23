@@ -4,7 +4,19 @@
 # How to use
   Add the script "Settings" to your main menu (first scene).
   
-  To change settings add the Setting Receiver component to your toggle/slider/dropdown and set On Value Changed to change the specific setting you want to change.
+  To change settings use a toggle/dropdown/slider (unity only,textmeshpro support coming soon) and use the OnChangeValue function to reference the Settings script from
+  a GameObject and change a specific setting.
+ AA = AntiAliasing
+ 
+ RR = Realtime Reflection Probes
+ 
+ SQ = Shadow Quality (shadow type)
+ 
+ SR = Shadow Resolution
+ 
+ SP = Soft Particles (deferred only)
+ 
+ LOD = LOD Bias
   
 # Saved data location
   There is an option which allows you to select the location of the saved settings file:
