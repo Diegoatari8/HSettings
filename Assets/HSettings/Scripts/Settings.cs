@@ -15,13 +15,27 @@ namespace Helix.Settings
         public static float lodBias;
        
         string configFilePath;
-
+        public enum ConfigPath
+        {
+            GameDirectory,
+            AppData
+        }
+        public ConfigPath path;
+        public bool openPathInExplorer;
         //configuration name. used to be able to read them in config file and ignore when parsing
         string[] cfn = new string[6] { "antiAliasing:", "realtimeReflections:", "shadowQuality:", "shadowResolution:", "softParticles:", "lodBias:" };
         // Start is called before the first frame update
         void Awake()
         {
-            configFilePath = Directory.GetCurrentDirectory() + "/config.txt";
+            if (path == ConfigPath.GameDirectory) { configFilePath = Directory.GetCurrentDirectory() + "/config.txt"; }
+            else if (path == ConfigPath.AppData){ configFilePath = Application.persistentDataPath + "/config.txt"; }
+
+         #if UNITY_EDITOR
+            
+            if(openPathInExplorer) { UnityEditor.EditorUtility.RevealInFinder(configFilePath); }
+
+          #endif
+
             if (!File.Exists(configFilePath))
             {
 
@@ -32,7 +46,7 @@ namespace Helix.Settings
                 foreach (string cfg in config)
                 {
                     writer.WriteLine(cfg);
-
+                     
 
                 }
                 writer.Close();

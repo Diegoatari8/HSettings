@@ -1,1 +1,0 @@
-antiAliasing:8;realtimeReflections:True;shadowQuality:2;shadowResolution:3;softParticles:True;lodBias:3
